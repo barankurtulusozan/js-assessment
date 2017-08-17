@@ -1,53 +1,50 @@
 [![Build Status](https://travis-ci.org/rmurphey/js-assessment.svg?branch=master)](https://travis-ci.org/rmurphey/js-assessment)
 
-# A test-driven JS assessment
+# Test Güdümlü JavaScript Geliştirme Egzersizleri
 
-This repo includes a set of tests that can be used to assess the skills of
-a candidate for a JavaScript position, or to evaluate and improve one's own
-skills.
+Bu repo kişilerin JavaScript yeteneklerini ölçerken, geliştirmelerine de yardımcı olmaktadır.
 
-## I want to work on the tests; what do I do?
-To use the tests, you will need to install [Node](https://nodejs.org/). Note
-that on Windows, there are some reports that you will need to restart
-after installing Node - see #12.
+Not: [Nasıl çalıştırırım?](https://blog.bko.io/index.php/2017/08/09/javascript-bilginizi-test-edin/)
 
-You can clone or download this repo. Once you have done so, from the root
-directory of the repo, run:
+Not2: [Bu reponun sahibi Rebecca Murphy'nin Disqus'tan Burak Yiğit Kaya (madbyk) ile TTL röportajı - As bayrakları edition](http://ttlpodcast.com/episodes/burak-yigit-kaya.html)
 
+## Testlerle çalışmak için ne yapmalıyım?
+Öncelikle bilgisayarınızda Node kurulu olmalı, değilse bu adresten indirin [Node](https://nodejs.org/) . Windows işletim sistemli bilgisayarlarda Node yüklendikten sonra bazen yeniden başlatılması gerekmektedir. Bkz #12.
+
+Bu repoyu indirebilir veya klonlayabilirsiniz. Bunu yaptıktan sonra kök dizinine giderek (egzersizleri indirdiğiniz klasöre node komut ekranından erişmek için cd klasörAdi komutunu kullanın), egzersiz klasörünün bulunduğu dizinde aşağıdaki komutları çalıştırın.
     npm install
     npm start
 
-You can then view the tests in your browser at
+Tarayıcınızda testleri aşağıdaki adreste görüntüleyebilirsiniz.
 [http://localhost:4444](http://localhost:4444).
 
-When you visit that page, all of the tests should be failing; your job is to
-get the tests to pass. To do this, you'll need to refer to the tests in the
-files in the `tests/app` directory, and edit the files in the `app/` directory.
-Once you update a test, you can reload the test page in the browser to see
-whether it worked.
-
-You can also run (most of) the tests on the command line:
+Sayfa açıldığında bütün testlerin başarısız olduklarını göreceksiniz. Göreviniz 
+kırmızı çarpı'ları yeşil tiklere dönüştürmek. Bunun için projeyi favori editörünüzle
+açtıktan sonra (Sublime/Atom/Notepad++/Emacs vb.) 'tests/app' klasöründe yer alan
+test fonksiyonlarının içlerini doğru şekilde doldurmalısınız. (parametre 
+isimlendirmelerine dikkat edin) Her save/sakla/kaydet dediğinizde tarayıcınızdaki
+ testin yeniden yüklenerek kontrol edildiğini göreceksiniz. Sayfa yenilemenize gerek
+yoktur. Testlerin çoğunu komut satırından çalıştırabilirsiniz.
 
     npm test
 
-The command line runner is a work in progress; contributions welcome :)
+Komut satırı yorumlayıcısı hala geliştirilmektedir, destekleriniz memnuniyetle karşılanacaktır.
 
-### Available dependencies
+### Mevcut Bağımlılıklar
 
-The repo includes jQuery, Backbone, and Underscore. You can use these
-libraries when writing your solutions!
+Bu repoda jQuery, Backbone ve Underscore 3.parti bağımlıkları yer almaktadır.Kendi 
+çözümleriniz için bunlardan faydalanabilirsiniz..
 
-## I want to contribute tests; what do I do?
+## Katkıda bulunmak istiyorum, ne yapmalıyım?
 
-Submit a pull request! The tests are currently loosely organized by topic, so
-you should do your best to add tests to the appropriate file in `tests/app`, or
-create a new file there if you don't see an appropriate one. If you do create
-a new file, make sure to add it to `tests/runner.js`, and to add a stub for the
-solution to the corresponding file in `app/`. Finally, it would be great if you
-could update the [answers](https://github.com/rmurphey/js-assessment-answers)
-as well.
+Pull request talbeinde bulunun. Testler konu başlıklarına göre şu anda geniş geniş
+sınıflandırılmış durumda, bu sebeple `tests/app` içinde uygun yere ekleme yaparken 
+elinizden geleni ardınıza koymayın, eğer uygun bir seçenek göremezseniz yeni bir dosya
+oluşturun, eğer yeni bir dosya oluşturursanız `tests/runner.js`onu buraya eklemeyi 
+unutmayın. Son olarak eğer [çözümler](https://github.com/rmurphey/js-assessment-answers)'i
+de linkteki adrese eklerseniz iyi olur.
 
-If you're not sure how or where to add a test, please open an issue.
+Eğer testi nereye ve nasıl ekleyeceğinizden emin değilseniz lütfen bir issue açın.
 
 ### Data-driven tests
 
